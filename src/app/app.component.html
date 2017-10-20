@@ -1,0 +1,61 @@
+<header>
+  <div *ngIf="auth.isAuthenticated()" class="user-profile" style="float: right;">
+    <div class="monogram">XX</div>
+    <div class="user-menu">
+      <a class="pointer" routerLink="/profile">{{profile?.nickname}}</a>
+      <a class="pointer" *ngIf="auth.isAuthenticated()" (click)="auth.logout()"><i class="fa fa-sign-out fa-fw" aria-hidden="true"></i>&nbsp;Logout</a>
+      <a><i class="fa fa-cog fa-fw" aria-hidden="true"></i>&nbsp;Settings</a>
+    </div>
+  </div>
+  <div *ngIf="auth.isAuthenticated()" class="alert-notification" style="float: right;">
+    <div class="alert-icon">
+      <i class="fa fa-bell-o fa-2x fa-inverse" aria-hidden="true"></i>
+    </div>
+  </div>
+  <div class="hamburger" onclick="slideMenuOpen(menuState);" *ngIf="auth.isAuthenticated()">
+    <div class="hamburger-icon">
+      <i id="faHamburgerIcon" class="fa fa-bars fa-2x fa-inverse"></i>
+    </div>
+  </div>
+  <div class="corporateBranding">
+    <div class="corporate-mark"><a routerLink="/" class="pointer">FNF Online Payment System</a></div>
+  </div>
+  <ng2-slim-loading-bar [height]="'2px'" [color]="'lime'" class="clearfix"></ng2-slim-loading-bar>
+</header>
+<div id="mainContainer" class="main-container">
+  <div *ngIf="auth.isAuthenticated()" id="menuContainer" class="menu-container">
+    <div id="fullSideMenu" class="full-side-menu" style="display: none;">
+      <ul class="full-menu">
+        <li routerLinkActive='active'><a routerLink='home'><i class="fa fa-home fa-2x fa-inverse fa-fw" aria-hidden="true"></i>&nbsp;Home</a></li>
+        <li routerLinkActive='active'><a routerLink='profile'><i class="fa fa-user-o fa-2x fa-inverse fa-fw"></i>&nbsp;Profile</a></li>
+      </ul>
+    </div>
+    <div id="iconSideMenu" class="icon-side-menu">
+      <ul class="iconMenu">
+        <li id="homeIcon" routerLinkActive='active'><a routerLink='home'><i class="fa fa-home fa-2x fa-inverse fa-fw" aria-hidden="true"></i></a></li>
+        <li id="profileIcon" routerLinkActive='active'><a routerLink='profile'><i class="fa fa-user-o fa-2x fa-inverse fa-fw"></i></a></li>
+      </ul>
+    </div>
+    <div class="pz-logo">
+      <img src="assets/fnf_logo_trans.fw.png" alt="Fidelity National Financial" style="max-width: 45px;" /><br />&copy; 2017
+      <script>new Date().getFullYear()>2017&&document.write("-"+new Date().getFullYear());</script>
+    </div>
+  </div>
+  <div id="contentContainer" class="content-wrapper fullHeight">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12">
+          <div *ngIf="auth.isAuthenticated(); else infoText" style="margin-top: 10px;">
+            <router-outlet></router-outlet>
+          </div>
+          <ng-template #infoText>
+            <div>
+              <h3>Please login...</h3>
+              <button class="btn btn-primary" (click)="auth.login()">Login</button>
+            </div>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+C:\projects\VS\ngUi\bin\ngUi.dll.config
+C:\projects\VS\ngUi\bin\ngUi.dll
+C:\projects\VS\ngUi\bin\ngUi.pdb
+C:\projects\VS\ngUi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\projects\VS\ngUi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\projects\VS\ngUi\obj\Debug\ngUi.csprojResolveAssemblyReference.cache
+C:\projects\VS\ngUi\obj\Debug\ngUi.csproj.CoreCompileInputs.cache
+C:\projects\VS\ngUi\obj\Debug\ngUi.dll
+C:\projects\VS\ngUi\obj\Debug\ngUi.pdb

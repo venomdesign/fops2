@@ -1,0 +1,396 @@
+$color-primary-0: #003466 // Main Primary color */
+$color-primary-1: #0052a1 // Lightest shade of blue */
+$color-primary-2: #004282 // Lighter than primary */
+$color-primary-3: #002549 // Darker than primary, side menu */
+$color-primary-4: #012 // Very dark blue, borders, etc */
+
+$headline-font-family: 'Montserrat', sans-serif
+$standard-font-family: 'Lato', sans-serif
+$decorative-font-family: 'Open Sans Condensed', sans-serif
+$font-color: #fff
+$monogram-background: #3e8e41
+$green-highlight: #3e8e41
+$black: #000
+$white: #fff
+$gray: #ccc
+
+$user-menu-background: #f9f9f9
+$user-menu-background-hover: #f1f1f1
+
+$box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2)
+
+$spacer: 1rem !default
+$spacer-x: $spacer !default
+$spacer-y: $spacer !default
+
+html
+  height: 100vh
+  margin: 0
+  padding: 0
+
+body
+  background: $color-primary-0
+  border-left: solid 10px $color-primary-4
+  border-right: solid 10px $color-primary-4
+  border-top: solid 10px $color-primary-4
+  box-sizing: border-box
+  color: $font-color
+  font: 16px $standard-font-family
+  margin: 0
+  min-height: 100vh
+  padding: 0
+
+header
+  background-color: $color-primary-2
+  height: 45px
+  position: relative
+
+.headline
+  font-family: $decorative-font-family
+
+p
+  .italic
+    font-style: italic
+
+.user-profile
+  display: inline-block
+  justify-content: center
+  position: relative
+  z-index: 99999
+
+  &:hover
+    .user-menu
+      display: block
+
+    .monogram
+      background-color: $green-highlight
+
+.user-link
+  align-self: baseline
+  color: $font-color
+  display: flex
+  float: right
+  font-family: $headline-font-family
+  height: 45px
+  justify-content: center
+
+  a
+    align-self: baseline
+    color: $font-color
+    text-decoration: none
+
+    &:hover
+      color: $font-color;
+      text-decoration: underline;
+
+.hamburger-icon,
+.app-settings-icon,
+.corporate-mark,
+.logout-icon,
+.alert-icon,
+.monogram
+  align-self: center
+
+.corporate-branding
+  display: flex
+  float: right
+  height: 45px
+  justify-content: center
+  margin-right: 60px
+
+.corporate-mark
+  color: $font-color
+  font-family: $headline-font-family
+  font-size: 2em
+  font-weight: bold
+  line-height: .75em
+  margin-left: 60px
+  padding-top: 10px
+
+  a
+    color: $white
+    text-decoration: none
+
+    &:hover
+      text-decoration: none
+
+.hamburger
+  background-color: $black
+  cursor: pointer
+  display: flex
+  float: left
+  height: 45px
+  justify-content: center
+  width: 50px
+
+.monogram
+  background-color: $color-primary-3
+  border: 0
+  color: $font-color
+  cursor: pointer
+  font-family: $headline-font-family
+  font-size: 24px
+  height: 45px
+  padding-top: 6px
+  text-align: center
+  width: 50px
+
+.pz-logo
+  bottom: 5px
+  color: $font-color
+  font-size: .8em
+  justify-content: center
+  left: 2px
+  position: absolute
+
+.alert-notification
+  background-color: $gray
+  display: flex
+  height: 45px
+  justify-content: center
+  position: absolute
+  right: 50px
+  width: 50px
+
+.user-menu
+  background-color: $user-menu-background
+  box-shadow: $box-shadow
+  display: none
+  font-family: 'Montserrat', sans-serif
+  min-width: 160px
+  position: absolute
+  right: 0
+
+  a
+    color: $black
+    display: block
+    padding: 12px 16px
+    text-decoration: none
+
+    &:hover
+      background-color: $user-menu-background-hover
+
+.main-container
+  height: calc(100vh - 55px)
+  overflow: hidden
+  position: relative
+
+.content-wrapper
+  height: calc(100vh - 55px)
+  margin: 0 0 0 60px
+  overflow: auto
+  position: relative
+
+.menu-container
+  background-color: $color-primary-3
+  float: left
+  height: 100%
+  left: 0
+  position: absolute
+  z-index: 299
+
+.full-side-menu,
+.icon-side-menu
+  border: 0
+  margin: 0
+  padding: 0
+
+.full-side-menu ul
+  border: 0
+  list-style: none
+  margin: 0
+  padding: 0
+
+  li,
+  ul
+    border: 0
+    list-style: none
+    margin: 0
+    padding: 0
+
+.icon-side-menu ul
+  border: 0
+  list-style: none
+  margin: 0
+  padding: 0
+
+  li,
+  ul
+    border: 0
+    list-style: none
+    margin: 0
+    padding: 0
+
+.full-side-menu ul,
+.icon-side-menu ul
+  position: relative
+  z-index: 397
+
+.full-side-menu ul li,
+.icon-side-menu ul li
+  border-bottom: 2px $color-primary-1 solid
+  line-height: 1em
+  min-height: 1px
+  vertical-align: middle
+
+.full-side-menu ul li:first-child,
+.icon-side-menu ul li:first-child
+  border-top: 2px $color-primary-1 solid
+
+.full-side-menu ul li:hover,
+.icon-side-menu ul li:hover
+  cursor: default
+  position: relative
+  z-index: 399
+
+.full-side-menu ul ul,
+.icon-side-menu ul ul
+  left: 0
+  position: absolute
+  top: 100%
+  visibility: hidden
+  width: 100%
+  z-index: 398
+
+.full-side-menu ul li ul li,
+.icon-side-menu ul li ul li
+  border: 0
+
+.full-side-menu ul ul ul,
+.icon-side-menu ul ul ul
+  left: 99%
+  top: 0
+
+.full-side-menu ul li:hover > ul,
+.icon-side-menu ul li:hover > ul
+  visibility: visible
+
+.full-side-menu ul ul,
+.icon-side-menu ul ul
+  left: 99%
+  top: 0
+
+.full-side-menu ul
+  width: 15em
+
+.icon-side-menu ul
+  width: 50px
+
+.full-side-menu ul ul,
+.icon-side-menu ul ul
+  background-color: $gray
+  box-shadow: $box-shadow
+  font-family: 'Montserrat', sans-serif
+  width: 20em
+
+.full-side-menu ul ul li,
+.icon-side-menu ul ul li
+  color: $black
+
+  &.hover,
+  &:hover
+    background-color: $user-menu-background-hover
+
+.full-side-menu ul li
+  color: $white
+  padding: 7px 10px 10px 5px
+
+.icon-side-menu ul li
+  color: $black
+  padding: 7px 10px 10px 5px
+
+.full-side-menu ul li
+  &.hover,
+  &:hover
+    background: $color-primary-1
+    color: $white
+
+.icon-side-menu ul li
+  &.hover,
+  &:hover
+    background: $color-primary-1
+    color: $white
+
+.full-side-menu ul
+  a
+    &:link,
+    &:visited
+      color: $white
+      text-decoration: none
+
+  ul a
+    &:link,
+    &:visited
+      color: $black
+      text-decoration: none
+
+.icon-side-menu ul
+  a
+    &:link,
+    &:visited
+      color: $white
+      text-decoration: none
+
+  ul a
+    &:link,
+    &:visited
+      color: $black
+      text-decoration: none
+
+.full-side-menu ul a:hover,
+.icon-side-menu ul a:hover
+  color: $white
+
+.full-side-menu ul a:active
+  color: #ffa500
+
+.icon-side-menu ul a:active
+  color: $color-primary-1
+
+.active-tab
+  background-color: #777
+
+.reveal
+  -moz-transition: all 10s ease-in-out
+  -webkit-transition: all 10s ease-in-out
+  -o-transition: all 10s ease-in-out
+  transition: all 10s ease-in-out
+
+.top-buffer
+  margin-top: 15px
+
+.active
+  background-color: $color-primary-1
+
+.pointer
+  cursor: pointer
+
+.slim-loading-bar
+  margin-left: 60px
+  margin-top: 55px
+
+.icon-button
+  background-color: transparent
+  border: 0
+
+// Bootstrap 4 style margins
+.mt-0
+  margin-top: 0
+
+.mb-0
+  margin-bottom: 0
+
+.mb-1
+  margin-bottom: ($spacer-y * .25)
+
+.mb-2
+  margin-bottom: ($spacer-y * .5)
+
+.mb-3
+  margin-bottom: ($spacer-y)
+
+.mb-4
+  margin-bottom: ($spacer-y * 1.5)
+
+.mb-5
+  margin-bottom: ($spacer-y * 3)

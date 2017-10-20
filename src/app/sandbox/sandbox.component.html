@@ -1,0 +1,31 @@
+        <h1>User List</h1>
+        <style>
+        	.well > .list-group > li { color: #000; }
+        </style>
+            <div class="well">
+<table border='0' cellspacing='5' cellpadding='2'>
+	<tr *ngFor="let user of users" style="background: #ccc; color: #000;">
+
+		<td>User ID: {{ user.useR_SYS_ID }}</td>
+                    <td>Email Address: {{ user.useR_NAME }}</td>
+                    <td>First Name: {{ user.firsT_NAME }}</td>
+                    <td>Middle Name: {{ user.middlE_INITIAL }}</td>
+                    <td>Last Name: {{ user.lasT_NAME }}</td>
+                    <td>Company ID: {{ user.companY_ID }}</td>
+                    <td>Address 1: {{ user.addresS_1 }}</td>
+                    <td>Address 2: {{ user.addresS_2 }}</td>
+                    <td>City: {{ user.city }}</td>
+                    <td>State: {{ user.state }}</td>
+                    <td>Zip Code: {{ user.ziP_CODE }}</td>
+                    <td>Phone #: {{ user.phonE_NUMBER }}</td>
+                    <td>Ext: {{ user.phonE_EXTENSION }}</td>
+                    <td>Mobile #: {{ user.mobilE_NUMBER }}</td>
+                    <!-- <td>Locked: {{ user.iS_LOCKED }}</td>
+                    <td>Active: {{ user.iS_ACTIVE }}</td> -->
+                    <td>Timezone: {{ user.timezone }}</td>
+
+	</tr>
+</table>
+
+            </div>
+       

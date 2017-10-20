@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>FOPS :: Fidelity National Financial</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:300,400,500,700|Open+Sans+Condensed:300" rel="stylesheet" />
+</head>
+<body>
+  <app-root></app-root>
+  <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/jquery.qtip.min.js"></script>
+  <script type="text/javascript">
+    // Set up some global variables
+    var menuState = "icon"; // Used to manage the state of the hamburger menu
+
+    function slideMenuOpen(state) {
+      if (state === 'icon') {
+        // set the menu state
+        menuState = 'full';
+
+        // show/hide the menus
+        $('#menuContainer').animate({
+          width: "15em"
+        }, 200, "linear", function () {
+          $('#fullSideMenu').show();
+          $('#iconSideMenu').hide();
+        });
+
+        // swap out the collapse icon
+        $('.hamburgerIcon').html('<i id="faHamburgerIcon" class="fa fa-angle-double-left fa-2x fa-inverse"></i>');
+      } else {
+        // set the menu state
+        menuState = 'icon';
+
+        // show/hide the menus
+        $('#iconSideMenu').show();
+        $('#fullSideMenu').hide();
+        $('#menuContainer').animate({
+          width: "50px"
+        }, 200, "linear");
+
+        // We want burgers!
+        $('.hamburgerIcon').html('<i id="faHamburgerIcon" class="fa fa-bars fa-2x fa-inverse"></i>');
+      };
+
+    }
+
+    $(document)
+      .ready(function () {
+        //$('.hamburger').click(function () {
+        //  slideMenuOpen(menuState);
+        //});
+
+        // set the tooltips for the icon menu, based on user settings
+        if (localStorage.getItem('showTooltips') == null) {
+          localStorage.setItem('showTooltips', 'true');
+        };
+
+         if (localStorage.getItem('showTooltips') === 'true') {
+         }
+      });
+
+  </script>
+</body>
+</html>
