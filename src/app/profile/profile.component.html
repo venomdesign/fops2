@@ -1,4 +1,4 @@
-<div class="panel panel-default profile-area">
+<!-- <div class="panel panel-default profile-area">
   <div class="panel-heading">
     <h3>Profile : {{profile?.name}}</h3>
   </div>
@@ -10,4 +10,24 @@
     </div>
     <pre class="full-profile">{{ profile | json }}</pre>
   </div>
+</div> -->
+<h3>User Profile</h3>
+<style>
+  li.list-group-item {  color: #000; }
+</style>
+<div class="row">
+    <div class="col-md-2">
+        <img class="thumbnail" style="width:100%" src="{{profile.picture}}">
+        <h5><strong>Nickname:</strong> {{profile.nickname}}</h5>
+    </div>
+    <div class="col-md-10">
+        <ul class="list-group">
+          <li class="list-group-item"><pre>{{ profile | json }}</pre></li>
+          <li class="list-group-item"><strong>Sub:</strong> {{profile.sub}}</li>
+          <li class="list-group-item"><strong>Email:</strong> {{profile.name}}</li>
+          <li class="list-group-item"><strong>Nickname:</strong> {{profile.nickname}}</li> 
+          <li class="list-group-item"><strong>Picture:</strong> {{profile.picture}}</li>
+          <li class="list-group-item"><strong>Profile Last Updated:</strong> {{profile.updated_at}}</li>   
+        </ul>
+    </div>
 </div>

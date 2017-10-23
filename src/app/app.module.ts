@@ -7,10 +7,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
 import { ChartsModule } from 'ng2-charts';
 import { ToastModule } from 'ng2-toastr/ng2-toastr';
-import { RouterModule, Routes } from '@angular/router';
-import { routes } from './register/routes';
+
 import { AppComponent } from './app.component';
-import { ThankyouComponent } from "./register/thankyou/thankyou.component";
+
 import { AuthGuardService } from './services/auth-guard.service';
 import { AuthService } from './services/auth.service';
 import { GlobalService } from './services/global.service';
@@ -21,7 +20,8 @@ import { CallbackComponent } from './callback/callback.component';
 import { PasswordComponent } from './password/password.component';
 import { SandboxComponent } from './sandbox/sandbox.component';
 import { DataService } from './services/data.service';
-import { RegisterComponent } from './register/register.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
     declarations: [
@@ -31,15 +31,14 @@ import { RegisterComponent } from './register/register.component';
         CallbackComponent,
         PasswordComponent,
         SandboxComponent,
-        RegisterComponent,
-        ThankyouComponent
+        RegistrationComponent,
+        LoginComponent
     ],
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
         FormsModule,
         HttpModule,
-        RouterModule.forRoot(routes),
         AppRoutingModule,
         SlimLoadingBarModule.forRoot(),
         ToastModule.forRoot(),
@@ -54,6 +53,6 @@ import { RegisterComponent } from './register/register.component';
         ScopeGuardService,
         DataService
     ],
-    bootstrap: [AppComponent, RegisterComponent]
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,56 @@
+<!-- <form class="register-form ng-untouched ng-pristine ng-valid" novalidate="">
+	<label>Email</label>
+	<input type="text" name="displayName" [(ngModel)]="user.useR_NAME" class="form-control">
+
+	<label>Password</label>
+	<input class="form-control" placeholder="Password" type="password">
+
+	<label>Confirm Password</label>
+	<input class="form-control" placeholder="Confirm Password" type="password">
+
+	<label for="fname">First Name</label>
+	<input class="form-control" placeholder="First Name" type="text">
+
+	<label for="middle-name">Middle Name</label>
+    <input class="form-control" placeholder="Middle Name" type="text">
+    
+    <label for="last-name">Last Name</label>
+    <input class="form-control" placeholder="Last Name" type="text">
+    
+    <label for="contactId">Contact Id</label>
+    <input class="form-control" placeholder="Contact ID" type="text">
+    
+    <label for="phone-no">Phone Number</label>
+    <input class="form-control" placeholder="Phone Number" type="text">
+    
+    <label for="mobile-no">Mobile Number</label>
+    <input class="form-control" placeholder="Mobile Number" type="text">
+    
+    <button class="btn btn-danger btn-block btn-round">Register</button>
+</form> -->
+<div class="col-md-6 col-md-offset-3">
+    <h2>Register</h2>
+    <form name="form" (ngSubmit)="f.form.valid && addUser()" #f="ngForm" novalidate>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+            <label for="FIRST_NAME">First Name</label>
+            <input type="text" class="form-control" name="FIRST_NAME" [(ngModel)]="user.FIRST_NAME" #FIRST_NAME="ngModel" required />
+            <div *ngIf="f.submitted && !FIRST_NAME.valid" class="help-block">First Name is required</div>
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+            <label for="LAST_NAME">Last Name</label>
+            <input type="text" class="form-control" name="LAST_NAME" [(ngModel)]="user.LAST_NAME" #LAST_NAME="ngModel" required />
+            <div *ngIf="f.submitted && !LAST_NAME.valid" class="help-block">Last Name is required</div>
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !email.valid }">
+            <label for="email">Username</label>
+            <input type="text" class="form-control" name="USER_NAME" [(ngModel)]="user.USER_NAME" #USER_NAME="ngModel" required />
+            <div *ngIf="f.submitted && !USER_NAME.valid" class="help-block">Email is required</div>
+        </div>
+        
+        <div class="form-group">
+            <button [disabled]="loading" class="btn btn-primary">Register</button>
+            <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+            <a [routerLink]="['/login']" class="btn btn-link">Cancel</a>
+        </div>
+    </form>
+</div>
