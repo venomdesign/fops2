@@ -10,19 +10,33 @@ export class DataService{
 
     }
 
-    getUsers(){
+    getUsers() {
         return this.http.get('http://localhost:56086/api/v1/Authorization/GetUsers')
             .map(res => res.json());
     } 
-    addUser(email:string, password:string){
+
+   /* addUser(userName, firstname){
+        this.selectedUser = null;
+        let user = {
+            'userName': userName.trim();
+            'firstname': firstname.trim()
+        }
+        if(!user.userName || !user.firstname){
+            return;
+        }
+        this.UserService.createUser(user).then(res => { this.users.push(res); })
+    }
+
+
+/*    addUser(email:string, password:string){
 
         var addUserUrl="http://localhost:56086/api/v1/Authorization/AddUser";
-        return this.http.post(addUserUrl,JSON.stringify({password: password,email: email }),
+        return this.http.post(addUserUrl,JSON.stringify({user: password,email: email }),
             {headers:new Headers({'Content-Type':'application/json'})}
             ).map(res=>res.json()).
             subscribe(
                 data => localStorage.setItem('id_token',data.auth_token),
                 error=>console.log(error)
             );
-    }
+    }*/
 }
