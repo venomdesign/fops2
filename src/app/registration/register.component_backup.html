@@ -1,0 +1,128 @@
+<div class="col-md-6 col-md-offset-3">
+    <h2>Register</h2>
+    <form name="form" (ngSubmit)="f.form.valid && register()" #f="ngForm" novalidate>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+            <label for="username">Email Address</label>
+            <input type="email" class="form-control" name="email" [(ngModel)]="model.email" #username="ngModel" required />
+            <div *ngIf="f.submitted && !username.valid" class="help-block">Email is required</div>
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" name="password" [(ngModel)]="model.password" #password="ngModel" required />
+            <div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" name="firstName" [(ngModel)]="model.firstName" #firstName="ngModel" required />
+            <div *ngIf="f.submitted && !firstName.valid" class="help-block">First Name is required</div>
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" required />
+            <div *ngIf="f.submitted && !lastName.valid" class="help-block">Last Name is required</div>
+        </div>
+
+        <div class="form-group">
+            <button [disabled]="loading" class="btn btn-primary">Register</button>
+            <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+            <a [routerLink]="['/login']" class="btn btn-link">Cancel</a>
+        </div>
+    </form>
+</div>
+
+<!-- <form  #form="ngForm" novalidate (ngSubmit)="register(form)">
+      novalidate="
+      <style>
+        input {
+          color: #000;
+          width: 325px;
+        }
+
+        label {
+          width: 200px;
+        }
+      </style>
+      <div class="row form-group">
+        <div class="col pull-left">
+          <label>Email</label>
+          <input class="form-control" type="email" name="USER_NAME" [(ngModel)]="user.USER_NAME" placeholder="Email Address" required>
+          <p>
+            input "emails" class is: {{ user.USER_NAME }}
+          </p>
+        </div>
+        <div class="col pull-left">
+          <label>Password</label>
+          <input class="form-control" type="password" name="PASSWORD" [(ngModel)]="user.PASSWORD" value="" placeholder="Password" required>
+        </div>
+      </div>
+      <div class="row form-group">
+        <div class="col pull-left">
+          <label>FIRST_NAME</label>
+          <input class="form-control" type="text" name="FIRST_NAME" [(ngModel)]="user.FIRST_NAME" placeholder="First name" required>
+        </div>
+        <div class="col pull-left">
+          <label>LAST_NAME</label>
+          <input class="form-control" type="text" name="LAST_NAME" [(ngModel)]="user.LAST_NAME" placeholder="Last name" required>
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <label>COMPANY_ID</label>
+        <input class="form-control" type="text" name="COMPANY_ID" [(ngModel)]="user.COMPANY_ID" placeholder="COMPANY_ID">
+      </div>
+      <div class="form-group">
+        <label>ADDRESS_1</label>
+        <input class="form-control" type="text" name="ADDRESS_1" [(ngModel)]="user.ADDRESS_1" placeholder="ADDRESS_1" required>
+      </div>
+      <div class="form-group">
+        <label>ADDRESS_2</label>
+        <input class="form-control" type="text" name="ADDRESS_2" [(ngModel)]="user.ADDRESS_2" placeholder="ADDRESS_2">
+      </div>
+
+
+      <div class="row form-group">
+        <div class="col pull-left">
+          <label>CITY</label>
+          <input class="form-control" type="text" name="CITY" [(ngModel)]="user.CITY" placeholder="CITY" required>
+        </div>
+        <div class="col pull-left">
+          <label>STATE</label>
+          <input class="form-control" type="text" name="STATE" [(ngModel)]="user.STATE" placeholder="STATE" style="width: 100px;" required>
+        </div>
+<div class="col pull-left"><label>ZIP_CODE</label>
+<input class="form-control" type="text" name="ZIP_CODE" [(ngModel)]="user.ZIP_CODE" placeholder="ZIP_CODE" maxlength="10" required>
+  </div>
+      </div>
+
+      
+        <div class="form-group">
+          <label>PHONE_NUMBER</label>
+          <input class="form-control" type="text" name="PHONE_NUMBER" [(ngModel)]="user.PHONE_NUMBER" value="" placeholder="PHONE_NUMBER" required>
+        </div>
+        <div class="form-group"><label>IS_LOCKED</label>
+      <input readonly class="form-control" type="text" name="IS_LOCKED" [(ngModel)]="user.IS_LOCKED" value="" placeholder="IS_LOCKED"><a href="#" class=" icon user"></a></div>
+      <div class="form-group"><label>IS_ACTIVE</label>
+      <input readonly class="form-control" type="text" name="IS_ACTIVE" [(ngModel)]="user.IS_ACTIVE" value="" placeholder="IS_ACTIVE"><a href="#" class=" icon user"></a></div>
+        <div class="form-group">
+          <label>TIMEZONE</label>
+          <input class="form-control" type="text" name="TIMEZONE" [(ngModel)]="user.TIMEZONE" value="" placeholder="TIMEZONE" required>
+        </div>
+        <div class="form-group">
+          <label>COMMENTS_AGENTS</label>
+          <input class="form-control" type="text" name="COMMENTS_AGENTS" [(ngModel)]="user.COMMENTS_AGENTS" value="" placeholder="COMMENTS_AGENTS">
+        </div>
+        <div class="form-group"><label>AUDIT_REC_CREATE_DTS</label>
+      <input readonly class="form-control" type="text" name="AUDIT_REC_CREATE_DTS" [(ngModel)]="user.AUDIT_REC_CREATE_DTS" value="" placeholder="AUDIT_REC_CREATE_DTS"><a href="#" class=" icon user"></a></div>
+      <div class="form-group"><label>AUDIT_REC_CREATE_APPL_USER_ID</label>
+      <input readonly class="form-control" type="text" name="AUDIT_REC_CREATE_APPL_USER_ID" [(ngModel)]="user.AUDIT_REC_CREATE_APPL_USER_ID" value="" placeholder="AUDIT_REC_CREATE_APPL_USER_ID"><a href="#" class=" icon user"></a></div>
+      <div class="form-group"><label>AUDIT_REC_CREATE_APPL_ID</label>
+      <input readonly class="form-control" type="text" name="AUDIT_REC_CREATE_APPL_ID" [(ngModel)]="user.AUDIT_REC_CREATE_APPL_ID" value="" placeholder="AUDIT_REC_CREATE_APPL_ID"><a href="#" class=" icon user"></a></div>
+      <div class="form-group"><label>AUDIT_REC_CREATE_DB_USER_ID</label>
+      <input readonly class="form-control" type="text" name="AUDIT_REC_CREATE_DB_USER_ID;" [(ngModel)]="user.AUDIT_REC_CREATE_DB_USER_ID" value="" placeholder="AUDIT_REC_CREATE_DB_USER_ID"><a href="#" class=" icon user"></a></div>
+
+      <button type="submit" class="btn btn-primary">Register</button>
+      [disabled]="form.invalid"
+     
+        <router-outlet></router-outlet>
+    </form> -->

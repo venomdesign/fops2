@@ -8,7 +8,7 @@ import { SandboxComponent } from "./sandbox/sandbox.component";
 
 import { RegistrationComponent } from "./registration/registration.component";
 import { LoginComponent } from "./login/login.component";
-
+import { ThankyouComponent } from './thankyou/thankyou.component';
 import { AuthGuardService as AuthGuard } from './services/auth-guard.service';
 import { CallbackComponent } from "./callback/callback.component";
 
@@ -19,6 +19,8 @@ const routes: Routes = [
     { path: 'password', component: PasswordComponent },
     { path: 'sandbox', component: SandboxComponent },
     { path: 'register', component: RegistrationComponent },
+    { path: 'registration', component: RegistrationComponent },
+    { path: 'thankyou', component: ThankyouComponent },
     { path: 'login', component: LoginComponent },
     { path: 'callback', component: CallbackComponent },
     { path: '**', component: HomeComponent }

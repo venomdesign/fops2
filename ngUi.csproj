@@ -79,10 +79,11 @@
     <None Include="packages.config" />
     <Content Include="src\app\callback\callback.component.html" />
     <Content Include="src\app\home\home.component.html" />
+    <Content Include="src\app\login\login.component.html" />
     <Content Include="src\app\password\password.component.html" />
     <Content Include="src\app\profile\profile.component.html" />
     <Content Include="src\app\registration\registration.component.html" />
-    <Content Include="src\app\thankyou\thankyou.component.html" />
+    <Content Include="src\app\sandbox\sandbox.component.html" />
     <Content Include="src\assets\fnf_logo_trans.fw.png" />
     <Content Include="src\assets\ripple.svg" />
     <Content Include="src\app\app.component.sass" />
@@ -96,8 +97,9 @@
     <Content Include="src\app\home\home.component.sass" />
     <Content Include="src\app\callback\callback.component.sass" />
     <Content Include="src\app\password\password.component.sass" />
+    <Content Include="src\app\sandbox\sandbox.component.sass" />
+    <Content Include="src\app\login\login.component.sass" />
     <Content Include="src\app\registration\registration.component.sass" />
-    <Content Include="src\app\thankyou\thankyou.component.sass" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -127,17 +129,17 @@
     <TypeScriptCompile Include="src\app\callback\callback.component.ts" />
     <TypeScriptCompile Include="src\app\home\home.component.spec.ts" />
     <TypeScriptCompile Include="src\app\home\home.component.ts" />
+    <TypeScriptCompile Include="src\app\login\login.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\login\login.component.ts" />
     <TypeScriptCompile Include="src\app\password\password.component.spec.ts" />
     <TypeScriptCompile Include="src\app\password\password.component.ts" />
     <TypeScriptCompile Include="src\app\profile\profile.component.spec.ts" />
     <TypeScriptCompile Include="src\app\profile\profile.component.ts" />
-    <TypeScriptCompile Include="src\app\registration\registration-service.service.spec.ts" />
-    <TypeScriptCompile Include="src\app\registration\registration-service.service.ts" />
     <TypeScriptCompile Include="src\app\registration\registration.component.spec.ts" />
     <TypeScriptCompile Include="src\app\registration\registration.component.ts" />
-    <TypeScriptCompile Include="src\app\registration\User.ts" />
-    <TypeScriptCompile Include="src\app\thankyou\thankyou.component.spec.ts" />
-    <TypeScriptCompile Include="src\app\thankyou\thankyou.component.ts" />
+    <TypeScriptCompile Include="src\app\sandbox\sandbox.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\sandbox\sandbox.component.ts" />
+    <TypeScriptCompile Include="src\app\services\data.service.ts" />
     <TypeScriptCompile Include="src\environments\environment.prod.ts" />
     <TypeScriptCompile Include="src\environments\environment.ts" />
     <TypeScriptCompile Include="src\main.ts" />

@@ -22,6 +22,11 @@ import { SandboxComponent } from './sandbox/sandbox.component';
 import { DataService } from './services/data.service';
 import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
+import { ThankyouComponent } from './thankyou/thankyou.component';
+import { RouterModule, Routes } from '@angular/router';
+import { routes } from './routes';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
     declarations: [
@@ -32,7 +37,10 @@ import { LoginComponent } from './login/login.component';
         PasswordComponent,
         SandboxComponent,
         RegistrationComponent,
-        LoginComponent
+        LoginComponent,
+        ThankyouComponent,
+        HeaderComponent,
+        FooterComponent
     ],
     imports: [
         BrowserModule,
@@ -41,10 +49,11 @@ import { LoginComponent } from './login/login.component';
         HttpModule,
         AppRoutingModule,
         SlimLoadingBarModule.forRoot(),
+        RouterModule.forRoot(routes),
         ToastModule.forRoot(),
         [
             ChartsModule
-        ]
+        ],
     ],
     providers: [
         AuthService,
@@ -53,6 +62,6 @@ import { LoginComponent } from './login/login.component';
         ScopeGuardService,
         DataService
     ],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent,RegistrationComponent]
 })
 export class AppModule { }

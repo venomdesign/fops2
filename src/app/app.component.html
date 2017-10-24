@@ -47,6 +47,7 @@
         <div class="col-xs-12">
           <div *ngIf="auth.isAuthenticated(); else infoText" style="margin-top: 10px;">
             <router-outlet></router-outlet>
+             <app-footer></app-footer>
           </div>
           <ng-template #infoText>
             <div>
