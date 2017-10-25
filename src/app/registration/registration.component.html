@@ -28,7 +28,6 @@
     
     <button class="btn btn-danger btn-block btn-round">Register</button>
 </form>-->
-
 <div class="container">
 	<div class="row">
 <div class="col-md-6 col-md-offset-3">
@@ -37,7 +36,7 @@
  <form name="form" (ngSubmit)="register()" #f="ngForm" novalidate>
  	<div class="row">
         <div class="form-group col-sm-6 col-md-6">
-            <label for="username">Email Address</label>
+            <label for="email">Email Address</label>
             <input type="text" class="form-control" name="email" [(ngModel)]="user.USER_NAME" #userName="ngModel">
         </div>
     </div>
@@ -107,14 +106,7 @@
     </div>
 
 
-
-<input type="hidden" name="IS_LOCKED" [(ngModel)]="user.IS_LOCKED" #IS_LOCKED="ngModel" value="0"/>
-<input type="hidden" name="IS_ACTIVE" [(ngModel)]="user.IS_ACTIVE" #IS_ACTIVE="ngModel" value="1"/>
-<input type="hidden" name="COMMENTS_AGENTS" [(ngModel)]="user.COMMENTS_AGENTS" #COMMENTS_AGENTS="ngModel" value="Blah Blah"/>
-<input type="hidden" name="AUDIT_REC_CREATE_DTS" [(ngModel)]="user.AUDIT_REC_CREATE_DTS" #AUDIT_REC_CREATE_DTS="ngModel" value="03/18/1977"/>
-<input type="hidden" name="AUDIT_REC_CREATE_APPL_USER_ID" [(ngModel)]="user.AUDIT_REC_CREATE_APPL_USER_ID" #AUDIT_REC_CREATE_APPL_USER_ID="ngModel" value="UNIT_TEST"/>
-<input type="hidden" name="AUDIT_REC_CREATE_APPL_ID" [(ngModel)]="user.AUDIT_REC_CREATE_APPL_ID" #AUDIT_REC_CREATE_APPL_ID="ngModel" value="FOPS"/>
-<input type="hidden" name="AUDIT_REC_CREATE_DB_USER_ID" [(ngModel)]="user.AUDIT_REC_CREATE_DB_USER_ID" #AUDIT_REC_CREATE_DB_USER_ID="ngModel" value="BS"/>
+<input type="text" name="COMMENTS_AGENTS" [(ngModel)]="user.COMMENTS_AGENTS" #COMMENTS_AGENTS="ngModel" value="Blah Blah"/>
 
 <!--         <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !userName.valid }">
     <label for="username">Username</label>

@@ -6,7 +6,7 @@ import { Location} from '@angular/common';
 
 @Component({
   selector: 'app-registration',
-  template: './registration.component.html',
+  templateUrl: './registration.component.html',
   styleUrls: ['./registration.component.sass'],
   providers:[RegistrationServiceService]
 })

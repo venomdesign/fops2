@@ -36,6 +36,10 @@ C:\projects\VS\ngUi\dist\out-tsc\src\app\services\scope-guard.service.js
 C:\projects\VS\ngUi\dist\out-tsc\src\app\services\scope-guard.service.js.map
 C:\projects\VS\ngUi\dist\out-tsc\src\app\routes.js
 C:\projects\VS\ngUi\dist\out-tsc\src\app\routes.js.map
+C:\projects\VS\ngUi\dist\out-tsc\src\app\header\header.component.js
+C:\projects\VS\ngUi\dist\out-tsc\src\app\header\header.component.js.map
+C:\projects\VS\ngUi\dist\out-tsc\src\app\footer\footer.component.js
+C:\projects\VS\ngUi\dist\out-tsc\src\app\footer\footer.component.js.map
 C:\projects\VS\ngUi\dist\out-tsc\src\app\app.module.js
 C:\projects\VS\ngUi\dist\out-tsc\src\app\app.module.js.map
 C:\projects\VS\ngUi\dist\out-tsc\src\environments\environment.js
@@ -70,6 +74,10 @@ C:\projects\VS\ngUi\dist\out-tsc\src\app\login\login.component.spec.js
 C:\projects\VS\ngUi\dist\out-tsc\src\app\login\login.component.spec.js.map
 C:\projects\VS\ngUi\dist\out-tsc\src\app\home\home.component.spec.js
 C:\projects\VS\ngUi\dist\out-tsc\src\app\home\home.component.spec.js.map
+C:\projects\VS\ngUi\dist\out-tsc\src\app\header\header.component.spec.js
+C:\projects\VS\ngUi\dist\out-tsc\src\app\header\header.component.spec.js.map
+C:\projects\VS\ngUi\dist\out-tsc\src\app\footer\footer.component.spec.js
+C:\projects\VS\ngUi\dist\out-tsc\src\app\footer\footer.component.spec.js.map
 C:\projects\VS\ngUi\dist\out-tsc\src\app\callback\callback.component.spec.js
 C:\projects\VS\ngUi\dist\out-tsc\src\app\callback\callback.component.spec.js.map
 C:\projects\VS\ngUi\dist\out-tsc\e2e\app.po.js
