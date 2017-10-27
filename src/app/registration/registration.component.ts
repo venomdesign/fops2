@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { RegistrationServiceService } from './registration-service.service';
 import { User } from './User'
 import { Router, ActivatedRoute } from '@angular/router';
-import { Location} from '@angular/common';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-registration',

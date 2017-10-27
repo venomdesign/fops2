@@ -1,0 +1,55 @@
+<!-- <header>
+  <div *ngIf="auth.isAuthenticated()" class="user-profile" style="float: right;">
+    <div class="monogram">XX</div>
+    <div class="user-menu">
+      <a class="pointer" routerLink="/profile">{{profile?.nickname}}</a>
+      <a class="pointer" *ngIf="auth.isAuthenticated()" (click)="auth.logout()"><i class="fa fa-sign-out fa-fw" aria-hidden="true"></i>&nbsp;Logout</a>
+      <a><i class="fa fa-cog fa-fw" aria-hidden="true"></i>&nbsp;Settings</a>
+    </div>
+  </div>
+  <div *ngIf="auth.isAuthenticated()" class="alert-notification" style="float: right;">
+    <div class="alert-icon">
+      <i class="fa fa-bell-o fa-2x fa-inverse" aria-hidden="true"></i>
+    </div>
+  </div>
+  <div class="hamburger" onclick="slideMenuOpen(menuState);" *ngIf="auth.isAuthenticated()">
+    <div class="hamburger-icon">
+      <i id="faHamburgerIcon" class="fa fa-bars fa-2x fa-inverse"></i>
+    </div>
+  </div>
+  <div class="corporateBranding">
+    <div class="corporate-mark"><a routerLink="/" class="pointer">FNF Online Payment System</a></div>
+  </div>
+  <ng2-slim-loading-bar [height]="'2px'" [color]="'lime'" class="clearfix"></ng2-slim-loading-bar>
+</header> -->
+
+    <header class="navbar navbar-inverse navbar-fixed-top " role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars"></i>
+                </button>
+                 <a class="navbar-brand" href="/"><h1><span class="pe-7s-gleam bounce-in"></span> FNF</h1></a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li> 
+                    <li><a href="#">Link</a></li> 
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="icon-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Link</a></li>
+                            <li><a href="#">Link</a></li>
+                            <li class="active"><a href="404.html">404</a></li>
+                        </ul>
+                    </li>
+                    <li><span class="search-trigger"><i class="fa fa-search"></i></span></li>
+                </ul>
+            </div>
+        </div>
+    </header><!--/header-->

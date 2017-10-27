@@ -4,7 +4,7 @@ import { DataService } from '../services/data.service';
 @Component({
   selector: 'app-sandbox',
   templateUrl: './sandbox.component.html',
-  styleUrls: ['./sandbox.component.sass']
+  styleUrls: []
 })
 
 

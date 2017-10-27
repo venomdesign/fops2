@@ -5,12 +5,13 @@ import { ProfileComponent } from "./profile/profile.component";
 import { HomeComponent } from "./home/home.component";
 import { PasswordComponent } from "./password/password.component";
 import { SandboxComponent } from "./sandbox/sandbox.component";
-
+import { LogoutComponent } from './logout/logout.component';
 import { RegistrationComponent } from "./registration/registration.component";
 import { LoginComponent } from "./login/login.component";
 import { ThankyouComponent } from './thankyou/thankyou.component';
 import { AuthGuardService as AuthGuard } from './services/auth-guard.service';
 import { CallbackComponent } from "./callback/callback.component";
+
 
 const routes: Routes = [
     { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -22,7 +23,9 @@ const routes: Routes = [
     { path: 'registration', component: RegistrationComponent },
     { path: 'thankyou', component: ThankyouComponent },
     { path: 'login', component: LoginComponent },
+    { path: 'logout', component: LoginComponent },
     { path: 'callback', component: CallbackComponent },
+    { path: 'logout', component: LogoutComponent },
     { path: '**', component: HomeComponent }
 ];
 

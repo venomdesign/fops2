@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PasswordComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+
+/*function reset(username){
+    angularAuth0.changePassword({
+        connection: 'Username-Password-Authentication',
+        responseType: 'token',
+        email: username,
+    }, callback);
+}*/
+
+  }
 
   ngOnInit() {
+  
+  
+
   }
 
 }

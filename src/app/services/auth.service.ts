@@ -90,4 +90,7 @@ export class AuthService {
         const grantedScopes = JSON.parse(localStorage.getItem('scopes')).split(' ');
         return scopes.every(scope => grantedScopes.includes(scope));
     }
+    public singleLogout(): void {
+        this.auth0.logout({});
+    }
 }
