@@ -84,6 +84,7 @@
     <Content Include="src\app\home\home.component.html" />
     <Content Include="src\app\invoice\invoice.component.html" />
     <Content Include="src\app\login\login.component.html" />
+    <Content Include="src\app\logout\logout.component.html" />
     <Content Include="src\app\password\password.component.html" />
     <Content Include="src\app\profile\profile.component.html" />
     <Content Include="src\app\registration\registration.component.html" />
@@ -113,6 +114,7 @@
     <Content Include="src\app\history\history.component.sass" />
     <Content Include="src\app\invoice\invoice.component.sass" />
     <Content Include="src\app\wallet\wallet.component.sass" />
+    <Content Include="src\app\logout\logout.component.sass" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -152,6 +154,8 @@
     <TypeScriptCompile Include="src\app\invoice\invoice.component.ts" />
     <TypeScriptCompile Include="src\app\login\login.component.spec.ts" />
     <TypeScriptCompile Include="src\app\login\login.component.ts" />
+    <TypeScriptCompile Include="src\app\logout\logout.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\logout\logout.component.ts" />
     <TypeScriptCompile Include="src\app\password\password.component.spec.ts" />
     <TypeScriptCompile Include="src\app\password\password.component.ts" />
     <TypeScriptCompile Include="src\app\profile\profile.component.spec.ts" />

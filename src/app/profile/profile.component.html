@@ -11,11 +11,11 @@
     <pre class="full-profile">{{ profile | json }}</pre>
   </div>
 </div> -->
+<div class="row">
 <h3>User Profile</h3>
 <style>
   li.list-group-item {  color: #000; }
 </style>
-<div class="row">
     <div class="col-md-2">
         <img class="thumbnail" style="width:100%" src="{{profile.picture}}">
         <h5><strong>Nickname:</strong> {{profile.nickname}}</h5>
@@ -34,4 +34,5 @@
           <li class="list-group-item"><strong>MFA:</strong> {{profile.mfa_enabled}}</li>
         </ul>
     </div>
-</div>
+
+  </div>

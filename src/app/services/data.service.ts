@@ -11,7 +11,7 @@ export class DataService{
     }
 
     getUsers() {
-        return this.http.get('http://localhost:56086/api/v1/Authorization/GetUsers')
+        return this.http.get('http://localhost:56086/api/v1/Administration/GetUsers')
             .map(res => res.json());
     } 
 
@@ -30,7 +30,7 @@ export class DataService{
 
 /*    addUser(email:string, password:string){
 
-        var addUserUrl="http://localhost:56086/api/v1/Authorization/AddUser";
+        var addUserUrl="http://localhost:56086/api/v1/Administration/AddUser";
         return this.http.post(addUserUrl,JSON.stringify({user: password,email: email }),
             {headers:new Headers({'Content-Type':'application/json'})}
             ).map(res=>res.json()).

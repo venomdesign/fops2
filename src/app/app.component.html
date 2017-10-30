@@ -1,5 +1,4 @@
-<!-- <app-header></app-header> -->
-<header>
+<!-- <header>
   <div *ngIf="auth.isAuthenticated()" class="user-profile" style="float: right;">
     <div class="monogram">XX</div>
     <div class="user-menu">
@@ -19,13 +18,12 @@
     </div>
   </div>
   <div class="corporateBranding">
-    <div class="corporate-mark"><a routerLink="/" class="pointer">FNF Online Payment System</a></div>
+    <div class="corporate-mark"><a routerLink="/" class="pointer">EasyPay</a></div>
   </div>
-  <ng2-slim-loading-bar [height]="'2px'" [color]="'lime'" class="clearfix"></ng2-slim-loading-bar>
-</header>
-<div id="mainContainer" class="main-container">
-  <div *ngIf="auth.isAuthenticated()" id="menuContainer" class="menu-container">
-    <div id="fullSideMenu" class="full-side-menu" style="display: none;">
+  
+</header><ng2-slim-loading-bar [height]="'2px'" [color]="'lime'" class="clearfix"></ng2-slim-loading-bar> -->
+  <!--  <div *ngIf="auth.isAuthenticated()" id="menuContainer" class="menu-container">
+   <div id="fullSideMenu" class="full-side-menu" style="display: none;">
       <ul class="full-menu">
         <li routerLinkActive='active'><a routerLink='home'><i class="fa fa-home fa-2x fa-inverse fa-fw" aria-hidden="true"></i>&nbsp;Home</a></li>
         <li routerLinkActive='active'><a routerLink='profile'><i class="fa fa-user-o fa-2x fa-inverse fa-fw"></i>&nbsp;Profile</a></li>
@@ -39,28 +37,24 @@
         <li routerLinkActive='active'><a routerLink='register' title="Registration"><i class="fa fa-book fa-2x fa-inverse fa-fw"></i></a></li>
         <li routerLinkActive='active'><a routerLink='password' title="Password"><i class="fa fa-lock fa-2x fa-inverse fa-fw"></i></a></li>
       </ul>
+    </div> -->
+<!--     <div class="pz-logo">
+  <img src="assets/fnf_logo_trans.fw.png" alt="Fidelity National Financial" style="max-width: 45px;" /><br />&copy; 2017
+  <script>new Date().getFullYear()>2017&&document.write("-"+new Date().getFullYear());</script>
+</div> 
+  </div>-->
+<app-header></app-header>
+<div class="wrapper">
+  <div class="container-fluid">
+    <div *ngIf="auth.isAuthenticated(); else infoText" style="margin-top: 10px;">
+        <router-outlet></router-outlet>
     </div>
-    <div class="pz-logo">
-      <img src="assets/fnf_logo_trans.fw.png" alt="Fidelity National Financial" style="max-width: 45px;" /><br />&copy; 2017
-      <script>new Date().getFullYear()>2017&&document.write("-"+new Date().getFullYear());</script>
-    </div>
-  </div>
-  <div id="contentContainer" class="content-wrapper fullHeight">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-xs-12">
-          <div *ngIf="auth.isAuthenticated(); else infoText" style="margin-top: 10px;">
-            <router-outlet></router-outlet>
-          </div>
-          <ng-template #infoText>
-            <div>
-              <h3>Please login...</h3>
-              <button class="btn btn-primary" (click)="auth.login()">Login</button>
-            </div>
-          </ng-template>
-        </div>
+    <ng-template #infoText>
+      <div>
+        <h3>Please login...</h3>
+        <button class="btn btn-primary" (click)="auth.login()">Login</button>
       </div>
-    </div>
-  </div>
-</div>
-<!-- <app-footer></app-footer> -->
+    </ng-template>
+  </div><!-- end container -->
+</div><!-- end wrapper -->
+<app-footer></app-footer>

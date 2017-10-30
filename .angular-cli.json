@@ -23,14 +23,16 @@
         "../node_modules/qtip2/dist/jquery.qtip.min.css",
         "../node_modules/ng2-slim-loading-bar/bundles/style.css",
         "../node_modules/ng2-toastr/bundles/ng2-toastr.min.css",
-        "styles.sass"
+        "assets/css/icons.css",
+        "assets/css/style.css"
       ],
       "scripts": [
         "../node_modules/auth0-js/build/auth0.min.js",
         "../node_modules/ng2-slim-loading-bar/bundles/index.umd.js",
         "../node_modules/ng2-toastr/bundles/ng2-toastr.min.js",
         "../node_modules/chart.js/src/chart.js",
-        "../node_modules/moment/min/moment-with-locales.min.js"
+        "../node_modules/moment/min/moment-with-locales.min.js",
+        "assets/js/shared/menu.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

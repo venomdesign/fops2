@@ -1,10 +1,9 @@
-<div class="container">
-	<div class="row">
+
 		<div class="col-md-6 col-md-offset-3">
     		<h2>Register</h2>
-			<form name="form" (ngSubmit)="f.form.valid && register()" #f="ngForm" novalidate>
+			<form name="form" (ngSubmit)="f.form.valid && registerUser()" #f="ngForm" novalidate>
 			 	<div class="row">
-					<div class="form-group col-sm-10" [ngClass]="{ 'has-error': f.submitted && !userName.valid }">
+					<div class="form-group col-sm-12" [ngClass]="{ 'has-error': f.submitted && !userName.valid }">
 					    <label for="username">Email Address</label>
 					    <input type="text" class="form-control" name="userName" [(ngModel)]="user.USER_NAME" #userName="ngModel" required value="" placeholder="Email Address" />
 					    <div *ngIf="f.submitted && !userName.valid" class="help-block">Email Address is required</div>
@@ -13,41 +12,38 @@
 
 
 			 	<div class="row">
-					<div class="form-group col-sm-10" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+					<div class="form-group col-sm-6" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
 					    <label for="password">Password</label>
 					    <input type="text" class="form-control" name="password" [(ngModel)]="user.PASSWORD" #password="ngModel" required value="" placeholder="Password" />
 					    <div *ngIf="f.submitted && !userName.valid" class="help-block">Email Address is required</div>
 					</div>
-				</div>
-			 	<div class="row">
-					<div class="form-group col-sm-10" [ngClass]="{ 'has-error': f.submitted && !conf_password.valid }">
+				
+					<div class="form-group col-sm-6" [ngClass]="{ 'has-error': f.submitted && !conf_password.valid }">
 					    <label for="password">Confirm Password</label>
 					    <input type="text" class="form-control" name="conf_password" [(ngModel)]="user.CONF_PASSWORD" #conf_password="ngModel" required value="" placeholder="Confirm Password" />
 					    <div *ngIf="f.submitted && !userName.valid" class="help-block">Email Address is required</div>
 					</div>
 				</div>
 				<div class="row">
-					<div class="form-group col-sm-10" [ngClass]="{ 'has-error': f.submitted && !firstName.valid }">
+					<div class="form-group col-sm-5" [ngClass]="{ 'has-error': f.submitted && !firstName.valid }">
 					    <label for="firstName">First Name</label>
 					    <input type="text" class="form-control" name="firstName" [(ngModel)]="user.FIRST_NAME" #firstName="ngModel" required value="" placeholder="First Name"/>
 					    <div *ngIf="f.submitted && !firstName.valid" class="help-block">First Name is required</div>
 					</div>
-				</div>		
-			 	<div class="row">
-					<div class="form-group col-sm-10">
-					    <label for="middleName">Middle Name</label>
-					    <input type="text" class="form-control" name="middleName" [(ngModel)]="user.MIDDLE_NAME" #middleName="ngModel" required value="" placeholder="Middle Name" />
+				
+					<div class="form-group col-sm-2">
+					    <label for="middleName">Middle Initial</label>
+					    <input type="text" class="form-control" name="middleName" [(ngModel)]="user.MIDDLE_NAME" #middleName="ngModel" required value="" placeholder="Middle Initial" />
 					</div>
-				</div>
-				<div class="row">
-					<div class="form-group col-sm-10" [ngClass]="{ 'has-error': f.submitted && !lastName.valid }">
+				
+					<div class="form-group col-sm-5" [ngClass]="{ 'has-error': f.submitted && !lastName.valid }">
 					    <label for="lastName">Last Name</label>
 					    <input type="text" class="form-control" name="lastName" [(ngModel)]="user.LAST_NAME" #lastName="ngModel" required value="" placeholder="Last Name" />
 					    <div *ngIf="f.submitted && !lastName.valid" class="help-block">Last Name is required</div>
 					</div>
 				</div>
 			 	<div class="row">
-					<div class="form-group col-sm-10" [ngClass]="{ 'has-error': f.submitted && !company_id.valid }">
+					<div class="form-group col-sm-12" [ngClass]="{ 'has-error': f.submitted && !company_id.valid }">
 					    <label for="username">Company Id</label>
 					    <input type="text" class="form-control" name="company_id" [(ngModel)]="user.COMPANY_ID" #company_id="ngModel" required  value="" placeholder="Company ID"/>
 					    <div *ngIf="f.submitted && !company_id.valid" class="help-block">Company ID is required</div>
@@ -152,5 +148,3 @@
 				</div>        
 			</form>
 		</div>
-	</div>
-</div><br><br><br>

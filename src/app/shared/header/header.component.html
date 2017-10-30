@@ -21,35 +21,72 @@
     <div class="corporate-mark"><a routerLink="/" class="pointer">FNF Online Payment System</a></div>
   </div>
   <ng2-slim-loading-bar [height]="'2px'" [color]="'lime'" class="clearfix"></ng2-slim-loading-bar>
-</header> -->
+</header>
 
-    <header class="navbar navbar-inverse navbar-fixed-top " role="banner">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <i class="fa fa-bars"></i>
-                </button>
-                 <a class="navbar-brand" href="/"><h1><span class="pe-7s-gleam bounce-in"></span> FNF</h1></a>
-            </div>
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li> 
-                    <li><a href="#">Link</a></li> 
-                    <li class="dropdown active">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="icon-angle-down"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Link</a></li>
-                            <li><a href="#">Link</a></li>
-                            <li class="active"><a href="404.html">404</a></li>
+
+
+
+
+        <!-- Navigation Bar-->
+        <header id="topnav">
+            <div class="topbar-main">
+                <div class="container-fluid">
+
+                    <!-- Logo container-->
+                    <div class="logo">
+                        <!-- Text Logo -->
+                        <a href="index.html" class="logo">
+                            <span class="logo-small"><img src="assets/fnf_logo_trans.fw.png" alt="Fidelity National Financial" style="max-width: 45px;"></span>
+                            <span class="logo-large"><img src="assets/fnf_logo_trans.fw.png" alt="Fidelity National Financial" style="max-width: 45px;"> EasyPay</span>
+                        </a>
+                        <!-- Image Logo -->
+                        <!--<a href="index.html" class="logo">-->
+                        <!--<img src="assets/images/logo_dark.png" alt="" height="24" class="logo-lg">-->
+                        <!--<img src="assets/images/logo_sm.png" alt="" height="24" class="logo-sm">-->
+                        <!--</a>-->
+
+                    </div>
+                    <!-- End Logo container-->
+
+
+                    <div class="menu-extras topbar-custom">
+
+                        <ul class="list-inline float-right mb-0">
+
+                            <li class="menu-item list-inline-item">
+                                <!-- Mobile menu toggle-->
+                                <a class="navbar-toggle nav-link">
+                                    <div class="lines">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </a>
+                                <!-- End mobile menu toggle-->
+                            </li>
                         </ul>
-                    </li>
-                    <li><span class="search-trigger"><i class="fa fa-search"></i></span></li>
-                </ul>
+                    </div>
+                    <!-- end menu-extras -->
+
+                    <div class="clearfix"></div>
+
+                </div> <!-- end container -->
             </div>
-        </div>
-    </header><!--/header-->
+            <!-- end topbar-main -->
+                    <div class="navbar-custom"><!--  *ngIf="auth.isAuthenticated()" -->
+                <div class="container-fluid">
+                    <div id="navigation">
+                        <!-- Navigation Menu-->
+                        <ul class="navigation-menu">
+                            <li><a routerLink='home' title="Home"><!-- <i class="ti-home fa fa-home fa-2x fa-inverse fa-fw"></i> -->Home</a></li>
+                            <li><a routerLink='profile' title="Profile"><!-- <i class="ti-light-bulb"></i> -->Profile</a></li>
+                            <li><a routerLink='login' title="Login"><!-- <i class="ti-spray"></i> -->Login</a></li>
+                            <li><a routerLink='register' title="Registration"><!-- <i class="ti-files"></i> -->Registration</a></li>
+                            <li><a routerLink='password' title="Password"><!-- <i class="ti-gift"></i> -->Password</a></li>
+                            <li><a routerLink='logout' title="Logout"><!-- <i class="ti-gift"></i> -->Logout</a></li>
+                        </ul>
+                        <!-- End navigation menu -->
+                    </div> <!-- end #navigation -->
+                </div> <!-- end container -->
+            </div> <!-- end navbar-custom -->
+            </header>    

@@ -6,7 +6,7 @@ import { User } from './User'
 export class RegistrationServiceService {
     http: Http;
   
-    posts_Url: string = 'http://localhost:56086/api/v1/Authorization/AddUser';
+    posts_Url: string = 'http://localhost:56086/api/v1/Administration/AddUser';
     public constructor(http : Http) {
     	this.http = http;
 	}
